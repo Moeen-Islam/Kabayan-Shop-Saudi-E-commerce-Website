@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": "Customer orders"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "orderNumber": {
+      "type": "string",
+      "required": true
+    },
+    "guestCustomerId": {
+      "type": "string"
+    },
+    "houseNo": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string",
+      "required": true
+    },
+    "whatsapp": {
+      "type": "string",
+      "required": true
+    },
+    "areaName": {
+      "type": "string",
+      "required": true
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "COD",
+        "STC_PAY"
+      ],
+      "default": "COD"
+    },
+    "locationAddress": {
+      "type": "string"
+    },
+    "locationLat": {
+      "type": "decimal"
+    },
+    "locationLng": {
+      "type": "decimal"
+    },
+    "locationUrl": {
+      "type": "string"
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "packed",
+        "shipped",
+        "delivered",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order.item"
+    },
+    "subTotal": {
+      "type": "decimal"
+    },
+    "deliveryFee": {
+      "type": "decimal",
+      "default": 0
+    },
+    "grandTotal": {
+      "type": "decimal"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

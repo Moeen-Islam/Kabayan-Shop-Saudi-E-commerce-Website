@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111111;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}

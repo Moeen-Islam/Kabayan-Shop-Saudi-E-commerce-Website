@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_order_items",
+  "info": {
+    "displayName": "item"
+  },
+  "attributes": {
+    "productTitle": {
+      "type": "string"
+    },
+    "productSlug": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "colorName": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "lineTotal": {
+      "type": "decimal"
+    },
+    "thumbnailUrl": {
+      "type": "string"
+    }
+  }
+}

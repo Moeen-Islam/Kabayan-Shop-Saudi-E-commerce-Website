@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Kabayan Shop Saudi products"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "variants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.variant"
+    },
+    "availableSizes": {
+      "type": "json"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Abaya",
+        "Dress",
+        "Terno",
+        "Jacket",
+        "Top",
+        "Sweater"
+      ]
+    },
+    "genderGroup": {
+      "type": "enumeration",
+      "enum": [
+        "Women",
+        "Men",
+        "Kids"
+      ]
+    },
+    "brand": {
+      "type": "string"
+    },
+    "isNewArrival": {
+      "type": "boolean",
+      "default": false
+    },
+    "isMostWanted": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "basePrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

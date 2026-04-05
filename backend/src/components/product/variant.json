@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_product_variants",
+  "info": {
+    "displayName": "variant"
+  },
+  "attributes": {
+    "sku": {
+      "type": "string"
+    },
+    "colorName": {
+      "type": "string"
+    },
+    "colorCode": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": ["S", "M", "L", "XL", "XXL", "Free Size"]
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "variantImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
